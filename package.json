@@ -2,33 +2,18 @@
   "name": "testing-with-jest",
   "version": "1.0.0",
   "description": "A Jest + npm lab session",
-  "homepage": "https://github.com/FilipNordqvist/testing-with-jest#readme",
-  "bugs": {
-    "url": "https://github.com/FilipNordqvist/testing-with-jest/issues"
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest tests"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FilipNordqvist/testing-with-jest.git"
   },
-  "license": "MIT",
   "author": "Filip Nordqvist",
-  "type": "commonjs",
-  "main": "src/index.js",
-  "directories": {
-    "test": "tests"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FilipNordqvist/testing-with-jest/issues"
   },
-  "scripts": {
-    "test": "jest tests"
-  },
-  "dependencies": {
-    "geckodriver": "^5.0.0",
-    "selenium-webdriver": "^4.32.0",
-    "underscore": "^1.13.7"
-  },
-  "devDependencies": {
-    "copy-webpack-plugin": "^13.0.0",
-    "jest": "^29.7.0",
-    "webpack": "^5.99.7",
-    "webpack-cli": "^6.0.1"
-  }
+  "homepage": "https://github.com/FilipNordqvist/testing-with-jest#readme",
 }
