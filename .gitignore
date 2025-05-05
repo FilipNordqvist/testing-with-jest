@@ -138,3 +138,4 @@ out
 /dist/
 
 dist/main.js
+geckodriver.exe
