@@ -12,6 +12,7 @@
   },
   "license": "MIT",
   "author": "Filip Nordqvist",
+  "type": "commonjs",
   "main": "src/index.js",
   "directories": {
     "test": "tests"
