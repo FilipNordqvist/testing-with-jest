@@ -44,7 +44,7 @@ describe('Clicking "Poppa stacken!"', () => {
         await pop.click();
         let popText = await driver.switchTo().alert();
         let text = await popText.getText();
-        expect(text).toEqual("Tog bort");
+        expect(text).toEqual("Tog bort Filip Testsson");
         //expect(text).toEqual("En text som inte finns?");
         popText.accept();
        
