@@ -2,14 +2,12 @@ const { Builder, By, until } = require('selenium-webdriver');
 require('geckodriver');
 
 const fileUnderTest = 'file://' + __dirname.replace(/ /g, '%20') + '/../dist/index.html';
-console.log("Detta är filsökvägen: ", fileUnderTest);
 const defaultTimeout = 10000;
 let driver;
 jest.setTimeout(1000 * 60 * 5); // 5 minuter
 
 // Det här körs innan vi kör testerna för att säkerställa att Firefox är igång
 beforeAll(async () => {
-console.log(fileUnderTest);
     driver = await new Builder().forBrowser('firefox').build();
     await driver.get(fileUnderTest);
 });
@@ -33,3 +31,23 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+describe('Clicking "Poppa stacken!"', () => {
+    it('should open a prompt box and the name that was the popped', async () => {
+        let push = await driver.findElement(By.id('push'));
+        await push.click();
+        let alert = await driver.switchTo().alert();
+        await alert.sendKeys("Filip Testsson");
+        await alert.accept();     
+
+        let pop = await driver.findElement(By.id('pop'));
+        await pop.click();
+        let popText = await driver.switchTo().alert();
+        let text = await popText.getText();
+        //expect(text).toEqual("Tog bort");
+        expect(text).toEqual("En text som inte finns?");
+        popText.accept();
+       
+    });
+});
+
