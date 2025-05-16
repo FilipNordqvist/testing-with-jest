@@ -135,7 +135,5 @@ out
 .yarn/install-state.gz
 .pnp.*
 
-/dist/
-
-dist/main.js
+/dist
 geckodriver.exe
