@@ -137,3 +137,4 @@ out
 
 /dist
 geckodriver.exe
+.DS_Store
